@@ -1,0 +1,4 @@
+docker network create --driver bridge test
+docker run --name master-db --network test -p 15432:15432 -e POSTGRESQL_USERNAME=myuser -e POSTGRESQL_PASSWORD= -e POSTGRESQL_DATABASE=test postgresql:latest
+docker run --name replica-db --network test -p 15433:15433 -e POSTGRESQL_USERNAME=myuser -e POSTGRESQL_PASSWORD= -e POSTGRESQL_DATABASE=test postgresql:latest
+

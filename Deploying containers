@@ -1,8 +1,0 @@
-docker docker pull postgresql:latest
-docker run --name master-db postgresql:latest
-docker run --name master-db -e POSTGRESQL_DATABASE=test postgresql:latest
-docker run --name master-db --network test -e POSTGRESQL_USERNAME=myuser -e POSTGRESQL_PASSWORD= -e POSTGRESQL_DATABASE=test postgresql:latest
-docker run --name replica-db postgresql:latest
-docker network create --driver bridge test
-
-
